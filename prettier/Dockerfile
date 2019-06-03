@@ -1,7 +1,6 @@
-FROM node:8-alpine
+FROM node:12.3.1-alpine
 MAINTAINER sharils <sharils@users.noreply.github.com>
 
-RUN npm install --global prettier && npm cache --force clean
+RUN npm install --global prettier@1.17.1 && npm cache --force clean
 
-WORKDIR /prettier
 ENTRYPOINT ["prettier"]
